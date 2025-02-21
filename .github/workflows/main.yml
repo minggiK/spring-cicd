@@ -24,7 +24,5 @@ jobs:
         run: | # 도커 빌드할 때 사용하는 명령어 
           docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} -p ${{ secrets.DOCKER_HUB_PASSWORD }}
           docker build -t spring-cicd . 
-          docker tag spring-cicd minjik/spring-cicd:${GITHUB_SHA::7}  
-          docker push minjik/spring-cicd:${GITHUB_SHA::7}
-          
-          # -> 빌드하고, 빌드된 이미지를 Docker Hub에 보낸다.
+          docker tag spring-cicd minjikk/spring-cicd:${GITHUB_SHA::7}  
+          docker push minjikk/spring-cicd:${GITHUB_SHA::7}
