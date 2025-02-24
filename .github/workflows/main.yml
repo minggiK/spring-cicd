@@ -42,7 +42,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ap-northeast-2
         run: |
-          aws ssm send-command \  # \ -> 줄내림 
+          aws ssm send-command \  
             --instance-ids i-0d301e3f2117f8088 \
             --document-name "AWS-RunShellScript" \
             --parameters "commands=[
